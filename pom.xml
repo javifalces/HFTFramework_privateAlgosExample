@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lambda.javifalces</groupId>
+    <artifactId>HFTFramework_privateAlgosExample</artifactId>
+    <version>0.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <springboot-maven-build.version>2.4.1</springboot-maven-build.version>
+        <compiler.plugin.version>3.8.0</compiler.plugin.version>
+        <jmh.version>1.36</jmh.version>
+        <junit4.version>4.13.1</junit4.version>
+        <junit.version>5.9.2</junit.version>
+        <lombok.version>1.18.20</lombok.version>
+        <log4j2.version>2.18.0</log4j2.version>
+        <slf4j.version>2.0.0-alpha7</slf4j.version>
+        <antrun.version>3.0.0</antrun.version>
+
+        <hft.framework.version>1.0.8</hft.framework.version>
+        <spring.version>5.2.22.RELEASE</spring.version>
+        <spring.plugin.version>3.0.0</spring.plugin.version>
+
+    </properties>
+
+    <modules>
+        <module>public_trading_algorithms</module>
+        <module>public_executables</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>parent_pom</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>algorithmic_trading_framework</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>machine_learning</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>backtest_engine</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>market_data_connectors</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>trading_engine_connectors</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>configuration</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>models</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>broker_connector_instances</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.javifalces</groupId>
+                <artifactId>trading_algorithms</artifactId>
+                <version>${hft.framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.plugin</groupId>
+                <artifactId>spring-plugin-core</artifactId>
+                <version>${spring.plugin.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-api</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-core</artifactId>
+                <version>${log4j2.version}</version>
+            </dependency>
+
+            <!-- remove warning slf4j    No SLF4J providers were found        -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-nop</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <!--Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+
+        <!-- Logging dependencies-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+
+        <!-- common dependencies -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.plugin</groupId>
+            <artifactId>spring-plugin-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+
+
+    </dependencies>
+
+
+    <build>
+        <pluginManagement>
+
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>${antrun.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${springboot-maven-build.version}</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <release>${java.version}</release>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
+                        </path>
+
+                        <path>
+                            <groupId>org.openjdk.jmh</groupId>
+                            <artifactId>jmh-generator-annprocess</artifactId>
+                            <version>${jmh.version}</version>
+                        </path>
+
+                    </annotationProcessorPaths>
+
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.1.4</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>pom.xml</checkModificationExclude>
+                    </checkModificationExcludes>
+                    <pushChanges>false</pushChanges>
+                    <localCheckout>true</localCheckout>
+                    <goals>deploy</goals>
+                </configuration>
+            </plugin>
+
+            <!--            <plugin>-->
+            <!--                <groupId>se.bjurr.gitchangelog</groupId>-->
+            <!--                <artifactId>git-changelog-maven-plugin</artifactId>-->
+            <!--                <version>2.1.0</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>GenerateGitChangelog</id>-->
+            <!--                        <phase>generate-sources</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>git-changelog</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <templateFile>changelog.mustache</templateFile>-->
+            <!--                            <readableTagName>-([^-]+?)$</readableTagName>-->
+            <!--                            <file>CHANGELOG.md</file>-->
+            <!--                            &lt;!&ndash;                            <mediaWiki>false</mediaWiki>&ndash;&gt;-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+
+        </plugins>
+    </build>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <!--suppress UnresolvedMavenProperty -->
+            <url>https://maven.pkg.github.com/${github.repository}</url>
+        </repository>
+    </distributionManagement>
+    <scm>
+        <developerConnection>
+            scm:git:git@github.com:javifalces/market_making_fw.git
+        </developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+
+</project>

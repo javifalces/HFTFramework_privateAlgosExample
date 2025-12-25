@@ -1,0 +1,23 @@
+{
+  "backtest": {
+    "startDate": "20250710 9:00:00",
+    "endDate": "20250710 12:00:00",
+    "instrument": "btceur_kraken",
+    "delayOrderMs": 0,
+    "feesCommissionsIncluded": false,
+    "seed": 0,
+    "multithreadConfiguration": "single_thread",
+    "initialSleepSeconds": -1,
+    "searchMatchMarketTrades": true
+  },
+  "algorithm": {
+    "algorithmName": "ExampleAlgo_test_Backtest",
+    "parameters": {
+      "seed": 5,
+      "quantity": "0.001",
+      "firstHour": "7.0",
+      "lastHour": "19.0",
+      "ui": 1
+    }
+  }
+}

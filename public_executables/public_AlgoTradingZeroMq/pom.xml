@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>public_executables</artifactId>
+        <version>0.0.0-SNAPSHOT</version>
+        <groupId>com.lambda.javifalces</groupId>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>public_AlgoTradingZeroMq</artifactId>
+
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.lambda.javifalces</groupId>
+            <artifactId>public_trading_algorithms</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.javifalces</groupId>
+            <artifactId>CoreAlgoTradingZeroMq</artifactId>
+            <version>${hft.framework.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>AlgoTradingZeroMq</finalName>
+        <plugins>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>make-my-jar-with-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.lambda.investing.algo_trading.App</mainClass>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <!--<excludes>-->
+                    <!--<exclude>**/application.properties</exclude>-->
+                    <!--</excludes>-->
+                </configuration>
+            </plugin>
+
+        </plugins>
+
+
+    </build>
+
+</project>

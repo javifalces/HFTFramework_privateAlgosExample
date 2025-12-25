@@ -1,0 +1,21 @@
+{
+  "marketDataPort": 6620,
+  "tradeEnginePort": 6621,
+  "tradeEngineHost": "localhost",
+  "marketDataHost": "localhost",
+  "paperTrading": "True",
+  "demoTrading": "False",
+  "instrumentPks": [
+    "btceur_kraken"
+  ],
+  "algorithm": {
+    "algorithmName": "ExampleAlgo_test_zeroMQ",
+    "parameters": {
+      "seed": 5,
+      "quantity": "0.001",
+      "firstHour": "7.0",
+      "lastHour": "19.0",
+      "ui": 1
+    }
+  }
+}
