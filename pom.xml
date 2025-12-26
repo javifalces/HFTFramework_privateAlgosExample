@@ -22,7 +22,7 @@
         <slf4j.version>2.0.0-alpha7</slf4j.version>
         <antrun.version>3.0.0</antrun.version>
 
-        <hft.framework.version>1.0.8</hft.framework.version>
+        <hft.framework.version>1.0.10</hft.framework.version>
         <spring.version>5.2.22.RELEASE</spring.version>
         <spring.plugin.version>3.0.0</spring.plugin.version>
 
