@@ -221,14 +221,14 @@ The backtest will output:
 
 Example output:
 ```
-backtest 100% [===========] 43555/43555 (0:00:05 / 0:00:00) 10/07 11:59:59.900
-Finished reading backtest Parquet: 6.002 s
-btceur_kraken
+backtest 100% [===========] 18923/18923 (0:00:02 / 0:00:00) 14/12 11:59:59.598
+Finished reading backtest Parquet: 3.050 s
+sampleeur_kraken
 
-	trades:1509 (agg:1509)  position:0,000 totalPnl:-10,043 totalFees:0,000
-	realizedPnl:-10,043  realizedFees:0,000 
-	unrealizedPnl:0,000  unrealizedFees:0,000 
-	
+	trades:933 (agg:933)  position:-0,010 totalPnl:-0,000 totalFees:0,000
+	realizedPnl:-0,000  realizedFees:0,000 
+	unrealizedPnl:-0,000  unrealizedFees:0,000 
+Exit on stop in backtest
 ```
 ### Step 4: Launch from Python (optional)
 set LAMBDA_JAR_PATH=public_executables\public_Backtest\target\Backtest.jar 

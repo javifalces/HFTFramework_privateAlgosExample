@@ -6,13 +6,13 @@
   "paperTrading": "True",
   "demoTrading": "False",
   "instrumentPks": [
-    "btceur_kraken"
+    "sampleeur_kraken"
   ],
   "algorithm": {
     "algorithmName": "ExampleAlgo_test_zeroMQ",
     "parameters": {
       "seed": 5,
-      "quantity": "0.001",
+      "quantity": "10000",
       "firstHour": "7.0",
       "lastHour": "19.0",
       "ui": 1
